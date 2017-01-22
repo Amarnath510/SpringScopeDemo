@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 public class StudentService {
 	
 	@Autowired
-    public Student autoStuSingleton;
+    public Student student;
 	
 	@Autowired
-	public Course autoCourseSingleton;
+	public Course course;
 	
 	public void printSingletonCount() {
-		System.out.println("Autowiring Singleton Scope Student Object count = " + autoStuSingleton.getCount() );
+		System.out.println("Autowiring Singleton Scope Student Object count = " + student.getCount() );
 	}
 
 	public void printPrototypeCount() {
-		System.out.println("Autowiring Prototype Scope Course Object count = " + autoCourseSingleton.getCount() );
+		System.out.println("Autowiring Prototype Scope Course Object count = " + course.getCount() );
 	}
 }

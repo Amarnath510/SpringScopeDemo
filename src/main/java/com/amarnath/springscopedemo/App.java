@@ -24,7 +24,7 @@ public class App
         System.out.println("\n***** Prototype Scope *****\n");
         Course c = null;
         for (int i = 0; i < 3; i++) {
-        	c = (Course) context.getBean("prototypeCourse");
+        	c = (Course) context.getBean("courseBean");
         }
 
         // count will be 5 because we are creating 3 here and 2 from Autowired annotation in Course and Student service classes.

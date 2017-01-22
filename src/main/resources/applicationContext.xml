@@ -19,7 +19,7 @@
 	-->
 	
 	<!-- Prototype Scope -->
-	<bean id="prototypeCourse" class="com.amarnath.springscopedemo.Course" scope="prototype"/>
+	<bean id="courseBean" class="com.amarnath.springscopedemo.Course" scope="prototype"/>
 	
 </beans>	
 	
