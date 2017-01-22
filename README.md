@@ -7,6 +7,9 @@
   - **Session** - Limited to session.
   - **Global Session** - Limited to global session context. <br />
 In the below section we will talk only about Singleton and Prototype scopes and how does Autowiring annotation works with this.  
+
+## Project Creation:
+  - Eclipse -> File -> New -> Maven -> Maven Project -> Select maven-archetype-quickstart -> Give artifact-id and group-id -> Finish.
   
 ## Singleton Scope
   - Only one instance will be created per bean definition.
@@ -74,3 +77,28 @@ In the below section we will talk only about Singleton and Prototype scopes and 
 **NOTE:** When using @Autowired annotation if there is more than one bean definition per Student or Course instance then we have to specify which bean we want to refer to which can be done using @Qualifier("bean id name") annotation.
 
 
+## Output
+
+  ```
+    Jan 22, 2017 4:02:48 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+    INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6193b845: startup date [Sun Jan 22 16:02:48 IST 2017]; root of context hierarchy
+    Jan 22, 2017 4:02:48 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+    INFO: Loading XML bean definitions from class path resource [applicationContext.xml]
+    Jan 22, 2017 4:02:48 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+    INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@58651fd0: defining beans [courseService,studentService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,studentBean,courseBean,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+
+    ***** Singleton Scope *****
+
+    Student Objects Count for Singleton Scope: 1
+
+    ***** Prototype Scope *****
+
+    Course Objects Count for Prototype Scope: 5
+
+    ***** Autowiring Singleton/Prototype Scope *****
+
+    Autowiring Singleton Scope Student Object count = 1
+    Autowiring Prototype Scope Course Object count = 5
+    Autowiring Singleton Scope Student Object count = 1
+    Autowiring Prototype Scope Course Object count = 5
+  ```
