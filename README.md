@@ -10,7 +10,7 @@ In the below section we will talk only about Singleton and Prototype scopes and 
 
 ## Project Creation:
   - Eclipse -> File -> New -> Maven -> Maven Project -> Select maven-archetype-quickstart -> Give artifact-id and group-id -> Finish.
-  - Project Strucutre:
+  - Project Structure:
   
     ![ProjectStructure](https://github.com/Amarnath510/SpringScopeDemo/blob/master/ProjectStructure.png)
   
